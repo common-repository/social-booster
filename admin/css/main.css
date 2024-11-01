@@ -1,0 +1,828 @@
+
+/*---rx-sb-meta-schedule-tab style--
+------------------------------------------------------------*/
+.rx-sb-meta-tab * {
+    box-sizing: border-box;
+}
+.rx-sb-meta-tab {
+    font-family: Roboto, sans-serif;
+    margin-top: 20px;
+    margin-left: 7px;
+}
+.rx-sb-meta-tab .rx-sb-meta-tabs {
+    margin: 0 0 0 -15px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.rx-sb-meta-tab .rx-sb-meta-tabs li {
+    display: block;
+    position: relative;
+    margin-bottom: 18px;
+    margin-left: 15px;
+}
+.rx-sb-meta-tab .rx-sb-meta-tabs li#schedule-share,
+.rx-sb-meta-tab .rx-sb-meta-tabs li a {
+    display: block;
+    padding: 0 30px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: rgb(42, 116, 251);
+    box-shadow: 0px 8px 15px 0px rgba(76, 132, 255, 0.18);
+    height: 52px;
+    line-height: 52px;
+    position: relative;
+    cursor: pointer;
+}
+.rx-sb-meta-tab .rx-sb-meta-tabs li.active:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%) rotate(90deg);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 9px solid #2a74fb;
+    border-bottom: 8px solid transparent;
+}
+
+.rx-sb-meta-tab .rx-sb-meta-tab-container {
+    background: #f3f4f8;
+}
+.rx-sb-meta-tab .rx-sb-meta-tab-content {
+    border-radius: 4px;
+    padding: 30px;
+}
+.rx-sb-meta-tab .rx-sb-meta-tab-content .share-btn{
+    display: block;
+    padding: 0 30px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #2a74fb;
+    height: 52px;
+    line-height: 52px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+/*---------rx-sb-meta-child-tab style--------*/
+.rx-sb-meta-tab .meta-child-tabs{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    background: #e8e8e8;
+}
+.rx-sb-meta-tab .meta-child-tabs li{
+    margin: 0;
+}
+.rx-sb-meta-tab .meta-child-tabs li a{
+    padding: 8px 20px;
+    text-decoration: none;
+    font-size: 24px;
+    display: block;
+    color: #fff;
+}
+.rx-sb-meta-tab .meta-child-tabs li a:focus{
+    box-shadow: none;
+    outline: inherit;
+}
+.rx-sb-meta-tab .meta-child-tabs li a.facebook{
+    color: #3b5998;
+}
+.rx-sb-meta-tab .meta-child-tabs li.active a.facebook{
+    background: #3b5998;
+    color: #fff;
+}
+
+.rx-sb-meta-tab .meta-child-tabs li a.twitter{
+    color: #1da1f2;
+}
+.rx-sb-meta-tab .meta-child-tabs li.active a.twitter{
+    background: #1da1f2;
+    color: #fff;
+}
+
+.rx-sb-meta-tab .meta-child-tabs li a.pinterest{
+    color: #E60023;
+}
+.rx-sb-meta-tab .meta-child-tabs li.active a.pinterest{
+    background: #E60023;
+    color: #fff;
+}
+
+
+.rx-sb-meta-tab .meta-child-tabs li a.linkedin{
+    color: #0e76a8;
+}
+.rx-sb-meta-tab .meta-child-tabs li.active a.linkedin{
+    background: #0e76a8;
+    color: #fff;
+}
+
+.rx-sb-meta-tab .meta-child-tabs li a.tumblr{
+    color: #34526f;
+}
+.rx-sb-meta-tab .meta-child-tabs li.active a.tumblr{
+    background: #34526f;
+    color: #fff;
+}
+
+.rx-sb-meta-tab .meta-child-tabs li a.instagram{
+    color: #E1306C;
+}
+.rx-sb-meta-tab .meta-child-tabs li.active a.instagram{
+    background: #E1306C;
+    color: #fff;
+}
+
+.rx-sb-meta-tab .meta-child-tabs li a.reddit{
+    color: #ff4500;
+}
+.rx-sb-meta-tab .meta-child-tabs li.active a.reddit{
+    background: #ff4500;
+    color: #fff;
+}
+
+/*------------*/
+.rx-sb-meta-tab .meta-child-tab-container {
+    padding: 30px;
+    border: 1px solid #e8e8e8;
+    margin-top: -1px;
+}
+.rx-sb-meta-tab .meta-child-tab-content .content-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+.rx-sb-meta-tab .meta-child-tab-content .instant-share-content {
+    width: 50%;
+}
+.rx-sb-meta-tab .meta-child-tab-content .profile-preview {
+    width: 50%;
+    padding-left: 30px;
+}
+.rx-sb-meta-tab .open-graph-content .input-group,
+.rx-sb-meta-tab .meta-child-tab-content .input-group{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.rx-sb-meta-tab .open-graph-content .input-group:last-child,
+.rx-sb-meta-tab .meta-child-tab-content .input-group:last-child{
+    margin-bottom: 0;
+}
+.rx-sb-meta-tab .meta-child-tab-content .input-group.choose-profile{
+    align-items: flex-start;
+}
+.rx-sb-meta-tab .open-graph-content .input-group label,
+.rx-sb-meta-tab .meta-child-tab-content .input-group label{
+    font-size: 16px;
+    text-transform: capitalize;
+    padding-right: 20px;
+    font-weight: 500;
+    min-width: 160px;
+}
+.rx-sb-meta-tab .open-graph-content .input-group textarea,
+.rx-sb-meta-tab .meta-child-tab-content .input-group textarea{
+    min-height: 120px;
+    border: 1px solid #e8e8e8;
+    max-width: 470px;
+    width: calc(100% - 160px);
+    box-shadow: none;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+.rx-sb-meta-tab .meta-child-tab-content .rex-sb-checkbox .single-option a.instant-share-channels {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(42, 116, 251);
+    text-decoration: none;
+    border-radius: 4px;
+}
+.rx-sb-meta-tab .meta-child-tab-content .rex-sb-checkbox .single-option a.instant-share-channels:focus{
+    box-shadow: none;
+    outline: inherit;
+}
+.rx-sb-meta-tab .open-graph-content .input-group input{
+    height: 50px;
+    border: 1px solid #e8e8e8;
+    max-width: 470px;
+    width: calc(100% - 160px);
+    box-shadow: none;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+
+
+
+/*---------checbox and radio button style--------*/
+.rex-sb-checkbox .single-option {
+    margin-bottom: 15px;
+}
+.rex-sb-checkbox .single-option p.instant-share-channels {
+    margin: 0;
+}
+.rex-sb-checkbox .single-option:last-child {
+    margin-bottom: 0;
+}
+.rex-sb-checkbox .single-option label {
+    color: #212327;
+    font-size: 16px;
+    font-weight: 400!important;
+    cursor: pointer;
+    position: relative;
+    padding: 0!important;
+    min-width: auto!important;
+}
+.rex-sb-checkbox .single-option input[type="radio"],
+.rex-sb-checkbox .single-option input[type="checkbox"] {
+    display: none;
+}
+.rex-sb-checkbox .single-option input[type="radio"] + label span,
+.rex-sb-checkbox .single-option input[type="checkbox"] + label span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: -1px 10px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid #b6bdcb;
+    position: relative;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+.rex-sb-checkbox .single-option input[type="radio"] + label span:before,
+.rex-sb-checkbox .single-option input[type="checkbox"] + label span:before {
+    color: #fff;
+    content: "\f00c";
+    font-size: 15px;
+    font-family: FontAwesome;
+    position: absolute;
+    text-align: center;
+    left: 5px;
+    top: 1px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+.rex-sb-checkbox .single-option input[type="radio"]:checked + label,
+.rex-sb-checkbox .single-option input[type="checkbox"]:checked + label {
+    color: #2a74fb;
+}
+.rex-sb-checkbox .single-option input[type="radio"]:checked + label span,
+.rex-sb-checkbox .single-option input[type="checkbox"]:checked + label span {
+    border-color: #2a74fb;
+    background: #2a74fb;
+}
+.rex-sb-checkbox .single-option input[type="radio"]:checked + label span:before,
+.rex-sb-checkbox .single-option input[type="checkbox"]:checked + label span:before {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+
+}
+
+
+
+/*--------rx-sb-share-schedule-option-----------*/
+.rx-sb-share-schedule-option{
+    background: #f3f4f8;
+    margin-top: 30px;
+}
+.rx-sb-meta-box > h4,
+.meta-schedule-share-title,
+.rx-sb-share-schedule-option .share-select-title{
+    font-family: Roboto,sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #212327;
+    margin: 0 0 10px 0px;
+    font-size: 15px;
+}
+.rx-sb-share-schedule-option select#rex-schedule-check{
+    width: 100%;
+    height: 56px;
+    border: 1px solid #eaebee;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    font-family: Roboto,sans-serif;
+    box-shadow: none;
+    margin: 0;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+.rx-sb-share-schedule-option .schedule-now,
+.rx-sb-share-schedule-option .rx-post-meta-schedule-now{
+    border-radius: 5px;
+    border: 1px solid rgb(234, 235, 238);
+}
+.rx-sb-share-schedule-option .schedule-now .title,
+.rx-sb-share-schedule-option .rx-post-meta-schedule-now .title{
+    font-size: 15px;
+    font-family: Roboto, sans-serif;
+    color: #2a74fb;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 16px 10px;
+    margin: 0;
+    border-bottom: 1px solid rgb(234, 235, 238);
+    background: #e8e8e8;
+}
+.rx-sb-share-schedule-option .schedule-now > ul,
+.rx-sb-share-schedule-option .rx-post-meta-schedule-now > ul{
+    margin: 0;
+    padding: 30px 30px 34px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.rx-sb-share-schedule-option .schedule-now > ul li,
+.rx-sb-share-schedule-option .rx-post-meta-schedule-now > ul li{
+    margin-bottom: 0;
+    margin-left: 30px;
+    width: calc(100% /3 - 20px);
+}
+.rx-sb-share-schedule-option .schedule-now > ul li:first-child,
+.rx-sb-share-schedule-option .rx-post-meta-schedule-now > ul li:first-child{
+    margin-left: 0;
+}
+.rx-sb-share-schedule-option .schedule-now > ul li .form-group,
+.rx-sb-share-schedule-option .rx-post-meta-schedule-now > ul li .form-group {
+    position: relative;
+}
+.rx-sb-share-schedule-option .schedule-now > ul li label,
+.rx-sb-share-schedule-option .rx-post-meta-schedule-now > ul li label {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 7px;
+    display: block;
+}
+.rx-sb-share-schedule-option .schedule-now > ul li select,
+.rx-sb-share-schedule-option .schedule-now > ul li input,
+.rx-sb-share-schedule-option .rx-post-meta-schedule-now > ul li select,
+.rx-sb-share-schedule-option .rx-post-meta-schedule-now > ul li input{
+    width: 100%;
+    box-shadow: none;
+    box-sizing: border-box;
+    height: 50px!important;
+    font-size: 15px;
+    text-transform: capitalize;
+    padding: 10px 18px;
+    border-radius: 4px;
+    margin: 0;
+    border: none;
+    background: #fff;
+    box-shadow: 0px 2px 1px 0px rgba(86, 86, 86, 0.07);
+}
+.rx-sb-share-schedule-option .schedule-now > ul li input[readonly],
+.rx-sb-share-schedule-option .rx-post-meta-schedule-now > ul li input[readonly]{
+    background: #fff;
+}
+.rx-sb-share-schedule-option .schedule-now > ul li i,
+.rx-sb-share-schedule-option .rx-post-meta-schedule-now > ul li i {
+    position: absolute;
+    font-size: 20px;
+    right: 0;
+    bottom: 0;
+    color: #999;
+    border-left: 1px solid rgb(234, 235, 238);
+    display: block;
+    padding: 15px;
+    border-radius: 0 5px 5px 0;
+}
+
+/*---------rex-sb-reschedule tab content-------------*/
+.rex-sb-reschedule .meta-child-tab-content .content-wrapper{
+    display: block;
+}
+.rex-sb-reschedule .meta-child-tab-content .schedule-network-title{
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #444;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*---rx-sb-post-meta-schedule
+/*-----------------------------------------------*/
+.rx-sb-post-meta-schedule{
+    margin-top: 15px;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px 30px;
+    margin-bottom: 10px;
+    position: relative;
+    box-shadow: 0 2px 1px 0 rgba(86,86,86,.07);
+    margin-top: 0;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul:last-child {
+    margin-bottom: 0;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-header {
+    padding: 25px 30px;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul li {
+    width: 25%;
+    padding-right: 20px;
+    margin-bottom: 0;
+    font-family: Roboto,sans-serif;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-header li {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #212327;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul li.status {
+    width: 90px;
+    padding-right: 0;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body .profile {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper > ul.network-body .network-icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    font-size: 16px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #3b5998;
+    margin-right: 8px;
+}
+
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper > ul.network-body .network-icon.facebook{
+    background: #3b5998;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper > ul.network-body .network-icon.twitter{
+    background: #1da1f2;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper > ul.network-body .network-icon.instagram{
+    background: #E1306C;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper > ul.network-body .network-icon.tumblr{
+    background: #34526f ;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper > ul.network-body .network-icon.linkedin{
+    background: #0077B5 ;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper > ul.network-body .network-icon.reddit{
+    background: #ff4500 ;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper > ul.network-body .network-icon.pinterest{
+    background: #BD081C ;
+}
+
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body li {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #212327;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body .time {
+    color: #999da4;
+    font-size: 15px;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body .status button {
+    background: #eee;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    line-height: 37px;
+    border-radius: 100%;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 2px;
+    border: none;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body .status button:focus {
+    box-shadow: none;
+    outline: inherit;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body .status button.edit {
+    color: #00d764;
+    background: #f5fdf9;
+}
+.rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body .status button.delete {
+    background: #fef8f9;
+    color: #e94369;
+}
+
+
+
+/*----------meta modal--------*/
+.sb-meta-modal-overlay:before{
+    content: "";
+    background: rgba(0, 0, 0, 0.54);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    transition: all 0.4s ease;
+}
+#rx-sb-share-status{
+    min-height: 15px;
+    position: absolute;
+    top: calc(50% - 200px);
+    right: 50%;
+    background: #eee;
+    padding: 50px 50px;
+    min-width: 450px;
+    border-radius: 5px;
+    -webkit-transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    z-index: 999;
+    display: none;
+}
+
+#rx-sb-share i{
+    display: none;
+}
+
+#rx-sb-share i.fa-show {
+    display: inline-block;
+}
+
+#rx-sb-share-status .cross {
+    position: absolute;
+    right: -8px;
+    top: -12px;
+    background: #eee;
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: #000;
+    font-size: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 100%;
+    border: 1px solid #c7c1c2;
+    cursor: pointer;
+}
+.rx-sb-meta-modal{
+    background: #fffbfb;
+    padding: 10px 25px;
+    margin: 0;
+    color: #00d760;
+    border: 1px solid #ffd9de;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#rx-sb-share-status.success {
+    color: #00d760;
+}
+#rx-sb-share-status.success .rx-sb-meta-modal{
+    border: 1px solid #00d7603d;
+}
+
+#rx-sb-share-status.error {
+    color: #f93333;
+}
+
+#rx-sb-share-status.error .rx-sb-meta-modal{
+    border: 1px solid #ffd9de;
+}
+
+
+
+/*---rx-sb-meta-schedule-edit-modal
+------------------------------------------------------------*/
+.rx-sb-meta-schedule-edit-modal *{
+    box-sizing: border-box;
+}
+.rx-sb-meta-schedule-edit-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 850px;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background: #f3f4f8;
+    border-radius: 5px;
+    box-shadow: 0 6px 30px 4px rgba(51, 51, 51, 0.18);
+    display: none;
+}
+.rx-sb-meta-schedule-edit-modal .modal-header {
+    background: #091459;
+    border-bottom: none;
+    padding: 15px 30px;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.rx-sb-meta-schedule-edit-modal .modal-header .modal-title {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+.rx-sb-meta-schedule-edit-modal .modal-header .close {
+    background: #fff;
+    opacity: 1;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: #212327;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.rx-sb-meta-schedule-edit-modal .modal-header .close:focus {
+    box-shadow: none;
+    outline: inherit;
+}
+.rx-sb-meta-schedule-edit-modal .modal-body {
+    padding: 30px;
+    border-radius: 0 0 4px 4px;
+}
+.rx-sb-meta-schedule-edit-modal .modal-body .form-group{
+    margin-bottom: 20px;
+}
+.rx-sb-meta-schedule-edit-modal .modal-body .form-group label{
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    color: #212327;
+    display: block;
+    margin-bottom: 7px;
+}
+.rx-sb-meta-schedule-edit-modal .modal-body .form-group select,
+.rx-sb-meta-schedule-edit-modal .modal-body .form-group input,
+.rx-sb-meta-schedule-edit-modal .modal-body .form-group textarea {
+    border: 1px solid #eaebee;
+    font-size: 14px;
+    height: 50px!important;
+    color: #212327;
+    border-radius: 5px;
+    resize: none;
+    box-shadow: none;
+    font-family: Roboto, sans-serif;
+    padding: 12px 20px;
+    width: 100%;
+}
+.rx-sb-meta-schedule-edit-modal .modal-body .edit-submit {
+    display: block;
+    border: none;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 30px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #2a74fb;
+    cursor: pointer;
+}
+
+
+/*---rx-sb-meta responsive style---
+------------------------------------------------------------*/
+@media only screen and (max-width: 1599px) {
+    .rx-sb-meta-tab .meta-child-tab-content .content-wrapper {
+        display: block;
+    }
+    .rx-sb-meta-tab .meta-child-tab-content .instant-share-content {
+        width: 100%;
+    }
+    .rx-sb-meta-tab .meta-child-tab-content .profile-preview {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+    .rx-sb-meta-schedule-edit-modal {
+        max-width: 750px;
+    }
+}
+
+@media only screen and (max-width: 1399px) {
+    .rx-sb-share-schedule-option .rx-post-meta-schedule-now > ul {
+        padding: 30px 20px 20px;
+        display: block;
+    }
+    .rx-sb-share-schedule-option .rx-post-meta-schedule-now > ul li {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .rx-sb-share-schedule-option .rx-post-meta-schedule-now > ul li:first-child {
+        margin-top: 0;
+    }
+
+    /*------network schedule table---------*/
+    .rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-header {
+        display: none;
+    }
+    .rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .rx-sb-post-meta-schedule .post-meta-schedule-wrapper > ul li {
+        width: 100% !important;
+    }
+
+    .rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body li {
+        padding-right: 0;
+        min-height: 46px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+    }
+    .rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body li:before {
+        content: "";
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #212327;
+        min-width: 150px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+    .rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body li.account:before {
+        content: "Network : ";
+    }
+    .rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body li.profile:before {
+        content: "profile : ";
+    }
+    .rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body li.time:before {
+        content: "Schedule Time : ";
+    }
+    .rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body li.recurring-type:before {
+        content: "Recurring Type : ";
+    }
+    .rx-sb-post-meta-schedule .post-meta-schedule-wrapper>ul.network-body li.status:before {
+        content: "Action : ";
+    }
+
+
+    .rx-sb-meta-schedule-edit-modal {
+        max-width: 570px;
+        position: absolute;
+    }
+
+}
+
+
+@media only screen and (max-width: 1199px){
+    .rx-sb-meta-tab .rx-sb-meta-tab-content {
+        padding: 20px;
+    }
+    .rx-sb-meta-tab .meta-child-tab-container {
+        padding: 20px;
+    }
+
+    .rx-sb-meta-tab .rx-sb-meta-tabs li#schedule-share,
+    .rx-sb-meta-tab .rx-sb-meta-tabs li a {
+        padding: 0 19px;
+    }
+
+
+
+
+}

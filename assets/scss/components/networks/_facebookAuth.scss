@@ -1,0 +1,466 @@
+%input-title{
+    color: #212327;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    display: inline-block;
+
+    &:before{
+        content: "";
+        width: 10px;
+        height: 10px;
+        border: 1px solid #8f949b;
+        border-radius: 100%;
+        position: absolute;
+        left: 0;
+        top: 9px;
+    }
+}
+
+
+//-------------tooltip--------------
+.rex-sb-tooltip{
+    position: absolute;
+    right: -30px;
+    top: 0;
+    
+    .tooltip-title{
+        font-weight: 500;
+        font-size: 13px;
+        display: block;
+        text-transform: capitalize;
+        color: $secondary-color;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .tooltip-text{
+        position: absolute;
+        min-width: 345px;
+        background: $primary-color;
+        color: #fff;
+        padding: 16px 25px;
+        text-transform: none;
+        font-weight: 400;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 26px;
+        bottom: 38px;
+        right: 50%;
+        z-index: 2;
+        @include transforms(translateX(50%));
+        @extend .visibility-hide;
+        @extend .transition-3s;
+        
+        &:before{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid $primary-color;
+            left: 50%;
+            bottom: -8px;
+            @include transforms(translateX(-50%));
+        }
+    }
+    &:hover .tooltip-text{
+        @extend .visibility-show;
+    }
+}
+
+
+
+//---------checbox and radio button style--------
+.rex-sb-checkbox{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-start;
+    
+    li{
+        margin-right: 45px;
+        
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    
+    label{
+        color: #212327;
+        font-size: 15px;
+        cursor: pointer;
+        text-transform: capitalize;
+        position: relative;
+    }
+    input[type="radio"],
+    input[type="checkbox"]{
+        display: none;
+    }
+    input[type="radio"]+label span,
+    input[type="checkbox"]+label span{
+        display: inline-block;
+        width: 30px;
+        height: 25px;
+        margin: -1px 10px 0 0;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 1px solid #b6bdcb;
+        position: relative;
+        border-radius: 3px;
+    }
+    input[type="radio"]+label span:before,
+    input[type="checkbox"]+label span:before{
+        color: $primary-color;
+        content: "\2713";
+        font-size: 18px;
+        position: absolute;
+        text-align: center;
+        left: 7px;
+        top: -3px;
+        @include transforms(scale(0));
+        @include transitions(0.2s);
+        font-weight: 700;
+    }
+    input[type="radio"]:checked+label span,
+    input[type="checkbox"]:checked+label span{
+        border-color: $primary-color;
+    }
+    input[type="radio"]:checked+label span:before,
+    input[type="checkbox"]:checked+label span:before{
+        @include transforms(scale(1));
+    }
+    input[type="radio"]+label span,
+    input[type="radio"]:checked+label span,
+    input[type="checkbox"]+label span,
+    input[type="checkbox"]:checked+label span{
+        @include transitions(background-color 0.2s linear);
+    }
+}
+
+
+//---------network content------------
+.networks-content{
+    .fb-auth-form{
+        background: #fff;
+        padding: 50px 40px;
+        margin-left: 30px;
+        
+        @media #{$device_1200_1399} {
+            padding: 20px;
+            margin-left: 20px;
+        }
+        
+        .notice{
+            border: 1px dashed $secondary-color;
+            background: rgba(1, 213, 99, 0.02);
+            box-shadow: none;
+            padding: 20px 30px;
+            border-radius: 3px;
+            margin-bottom: 45px;
+            @media #{$device_1200_1399} {
+                padding: 10px 15px;
+            }
+            @media #{$device_992_1199} {
+                margin-bottom: 25px;
+            }
+            
+            p{
+                font-size: 16px;
+                line-height: 30px;
+                color: #131313;
+            }
+            .note{
+                color: $secondary-color;
+                font-weight: 700;
+            }
+            a{
+                color: #131313;
+                font-weight: 500;
+                text-decoration: underline;
+                
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            .hidden-link{
+                color: $primary-color;
+                text-decoration: none;
+                font-weight: 700;
+                
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            b{
+                text-decoration: underline;
+                font-weight: 500;
+            }
+        }
+        
+        .sb-fb-forms{
+            padding: 40px 70px 20px 80px;
+            border-bottom: 1px solid #e6e7ea;
+            
+            @media #{$device_1400_1599} {
+                padding: 40px 0px 20px 0px;
+            }
+        }
+        
+        .post-info {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+            
+            .post-text{
+                width: 40%;
+                padding-right: 80px;
+                
+                @media #{$device_1400_1599} {
+                    width: 100%;
+                    padding-right: 0;
+                    margin-bottom: 30px;
+                }
+                
+                .title{
+                    @extend %input-title;
+                }
+                
+                li{
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #999;
+                    margin-bottom: 8px;
+                    position: relative;
+                    padding-left: 19px;
+                    
+                    &:before{
+                        content: "";
+                        width: 4px;
+                        height: 4px;
+                        background: #212327;
+                        border-radius: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 12px;
+                    }
+                    
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .new-post,
+            .existing-post{
+                width: 30%;
+                
+                @media #{$device_1400_1599} {
+                    width: 50%;
+                }
+                @media #{$device_992_1199} {
+                    width: 100%;
+                }
+                
+                h6{
+                    font-size: 14px;
+                    color: #999;
+                    text-transform: uppercase;
+                    position: relative;
+                    display: inline-block;
+                    margin-bottom: 6px;
+                }
+            }
+            .new-post{
+                padding-right: 50px;
+                
+                @media #{$device_1400_1599} {
+                    padding-right: 30px;
+                }
+                @media #{$device_992_1199} {
+                    padding-right: 0;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        
+        .form-wrapper{
+            
+            .sb-form-group{
+                display: flex;
+                flex-flow: row wrap;
+                align-items: flex-start;
+                margin-bottom: 40px;
+                
+                @media #{$device_992_1199} {
+                    display: block;
+                }
+                @media #{$device_992_1199} {
+                    margin-bottom: 30px;
+                }
+                
+                .form-title {
+                    margin-top: 14px;
+                    min-width: 350px;
+                    
+                    @media #{$device_1400_1599} {
+                        min-width: 280px;
+                    }
+                    @media #{$device_992_1199} {
+                        margin-top: 0;
+                        margin-bottom: 6px;
+                    }
+                    
+                    .title {
+                        @extend %input-title;
+                        margin-bottom: 0;
+                        
+                        @media #{$device_992_1199} {
+                            padding-left: 0;
+                            
+                            &:before{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .sb-form{
+                    max-width: 560px;
+                    width: 100%;
+                    position: relative;
+                    
+                    @media #{$device_1400_1599} {
+                        max-width: 480px;
+                    }
+                    @media #{$device_1200_1399} {
+                        max-width: 450px;
+                    }
+                    @media #{$device_992_1199} {
+                        max-width: 100%;
+                    }
+                    
+                    a{
+                        font-size: 14px;
+                        line-height: 26px;
+                        color: $primary-color;
+                        margin-top: 1px;
+                        
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    .info{
+                        border: 1px dashed $secondary-color;
+                        background: rgba(1, 213, 99, 0.02);
+                        padding: 17px 22px;
+                        border-radius: 3px;
+                        margin-top: 10px;
+                        
+                        p{
+                            font-size: 16px;
+                            line-height: 26px;
+                        }
+                        .tags-hints{
+                            font-weight: 500;
+                            color: $secondary-color;
+                        }
+                    }
+                    
+                    &.post-formate{
+                        .rex-sb-checkbox {
+                            display: block;
+                            
+                            label{
+                                color: #fff;
+                                font-weight: 400;
+                                margin-bottom: 12px;
+                                @extend .transition-3s;
+                            }
+                            input[type="radio"]+label span{
+                                border-color: #fff;
+                                width: 20px;
+                                height: 20px;
+                            }
+                            input[type="radio"]+label span:before{
+                                color: $primary-color;
+                                font-size: 13px;
+                                left: 4px;
+                                top: -4px;
+                                font-weight: 700;
+                            }
+                            input[type="radio"]:checked+label span{
+                                background: #fff;
+                            }
+                            input[type="radio"]:checked+label{
+                                color: #212327;
+                            }
+                        }
+                        
+                        .rex-sb-tooltip {
+                            right: 20px;
+                            top: 17px;
+                            width: 20px;
+                            height: 20px;
+                            
+                            .tooltip-text {
+                                min-width: 360px;
+                                
+                                @media #{$device_1400_1599} {
+                                    min-width: 320px;
+                                }
+                                @media #{$device_1200_1399} {
+                                    right: -20px;
+                                    @include transforms(translateX(0%));
+                                    
+                                    &:before{
+                                        left: inherit;
+                                        right: 20px;
+                                        @include transforms(translateX(0%));
+                                    }
+                                }
+                            }
+                            .tooltip-title{
+                                i{
+                                    font-size: 18px;
+                                    position: absolute;
+                                    left: 4px;
+                                    color: #212327;
+                                }
+                                .fa-sort-down {
+                                    margin-top: 1px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+        .fb-info-submit{
+            width: 180px;
+            margin: 60px auto 0;
+            height: 60px;
+            line-height: 60px;
+            
+            @media #{$device_992_1199} {
+                width: 150px;
+                margin: 40px auto 0;
+                height: 50px;
+                line-height: 50px;
+            }
+        }
+
+        .guide-wrapper {
+            padding-left: 16px;
+            
+            ol li {
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

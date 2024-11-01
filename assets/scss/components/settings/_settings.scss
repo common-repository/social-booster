@@ -1,0 +1,224 @@
+.sb-app-settings{
+
+    .header{
+        box-shadow: 0 1px 0 0 rgba(153,159,187,.1);
+        border-radius: 0 0 4px 0;
+        background: #fff;
+        padding: 21px 14px 21px 30px;
+
+        h4{
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 500;
+            color: #212327;
+            text-transform: capitalize;
+
+            img{
+                width: 22px;
+                vertical-align: middle;
+                margin-right: 3px;
+            }
+        }
+    }
+
+    .settings-body{
+        margin-top: 30px;
+        padding-left: 30px;
+
+        .card{
+            padding: 0;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            border: none;
+        }
+        .card-header {
+            margin-bottom: 20px;
+            padding: 0;
+            border: none;
+            background: transparent;
+
+            .nav-item {
+                margin-bottom: 0;
+                margin-right: 15px;
+
+                &:last-child{
+                    margin-right: 0;
+                }
+
+                .nav-link{
+                    box-shadow: 0 1px 1px 0 rgba(111,115,124,0.15);
+                    border: none;
+                    position: relative;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #212327;
+                    text-transform: uppercase;
+                    height: 44px;
+                    line-height: 44px;
+                    padding: 0 30px;
+                    background: #fff;
+                    transition: all 0.3s ease;
+
+                    @media #{$device_992_1199} {
+                        margin-bottom: 12px;
+                        font-size: 13px;
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 20px;
+                    }
+
+                    &.active{
+                        border-color: $primary-color;
+                        background: $primary-color;
+                        color: #fff;
+                    }
+
+                    &:before{
+                      content: "";
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-top: 8px solid #2a74fb;
+                        bottom: -8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        transition: all 0.3s ease;
+                        visibility: hidden;
+                        opacity: 0;
+
+                        @media #{$device_992_1199} {
+                            display: none;
+                        }
+                    }
+                    &.active{
+                        box-shadow: none;
+
+                        &:before{
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .single-tab{
+            background: #fff;
+            padding: 30px!important;
+            border-radius: 4px;
+            min-height: 402px;
+
+            .content-wrapper{
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                margin-bottom: 15px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                span.title{
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    min-width: 170px;
+                    padding-right: 15px;
+                }
+
+                .title-content{
+                    max-width: 510px;
+                    width: calc(100% - 170px);
+
+                    .inputs{
+                        input{
+                        }
+                    }
+                    .btn-default{
+                        height: 45px;
+                        line-height: 45px;
+                        margin-top: 20px;
+                    }
+                }
+
+                &.sb-post-type-selection{
+                  align-items: flex-start;
+
+                  .title-content{
+                    padding-left: 40px;
+                  }
+                }
+            }
+        }
+
+
+    }
+}
+
+//-------settings switcher style---------
+.sb-settings-switcher {
+    .switch-input {
+        visibility: hidden;
+        margin-left: -9999px;
+        position: absolute;
+        width: auto;
+    }
+    label {
+        margin-bottom: 0;
+        transition: all 0.3s ease;
+    }
+    .switch-input + label {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        border-radius: 80px;
+        border: 1px solid #ededed;
+        background: #f6f6f6;
+        height: 30px;
+        width: 54px;
+    }
+    .switch-input:checked + label {
+        background: $primary-color;
+        border-color: $primary-color;
+    }
+    .switch-input + label:before,
+    .switch-input + label:after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        left: 1px;
+        position: absolute;
+        top: 0;
+        transition: all 0.3s ease;
+    }
+    .switch-input + label:before {
+        right: 0px;
+        background: transparent;
+        border-radius: 75px;
+    }
+    .switch-input + label:after {
+        border-radius: 100%;
+        background-color: #fff;
+        top: 1px;
+        content: "";
+        color: $primary-color;
+        font-size: 18px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 1px 1px 0 rgba(81,86,95,0.30);
+        width: 26px;
+        height: 26px;
+    }
+    .switch-input:checked + label:after {
+//        content: "\2714";
+        box-shadow: none;
+        margin-left: 24px;
+    }
+}

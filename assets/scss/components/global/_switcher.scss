@@ -1,0 +1,71 @@
+.sb-switcher {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    
+    .title{
+        font-size: 16px;
+        color: #212327;
+        text-transform: capitalize;
+        margin-left: 12px;
+    }
+    .switch-input {
+        visibility: hidden;
+        margin-left: -9999px;
+        position: absolute;
+        width: auto;
+    }
+    label {
+        margin-bottom: 0;
+        @extend .transition-3s;
+    }
+    .switch-input + label {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        border-radius: 80px;
+        border: 1px solid #E0E2EB;
+        height: 36px;
+        width: 70px;
+    }
+    .switch-input:checked + label {
+        border-color: #E0E2EB;
+    }
+    .switch-input + label:before,
+    .switch-input + label:after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        left: 1px;
+        position: absolute;
+        top: 0;
+        @extend .transition-3s;
+    }
+    .switch-input + label:before {
+        right: 0px;
+        background: transparent;
+        border-radius: 75px;
+    }
+    .switch-input + label:after {
+        border-radius: 100%;
+        width: 32px;
+        height: 32px;
+        background-color: #fff;
+        box-shadow: 0 1px 1px 0 rgba(81,86,95,0.30);
+        top: 1px;
+        content: "";
+        color: $secondary-color;
+        font-size: 20px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .switch-input:checked + label:after {
+        margin-left: 34px;
+        content: "\2714";
+    }
+    
+}

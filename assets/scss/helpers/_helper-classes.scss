@@ -1,0 +1,167 @@
+@import 'colors';
+@import 'mixin';
+
+//---font weight Typography---
+.fw-300 {
+    font-weight: 300;
+}.fw-400 {
+    font-weight: 400;
+}.fw-500 {
+    font-weight: 500;
+}.fw-600 {
+    font-weight: 600;
+}.fw-700 {
+    font-weight: 700;
+}.fw-800 {
+    font-weight: 800;
+}.fw-900 {
+    font-weight: 900;
+}
+
+//----------------
+.pos-relative {
+    position: relative;
+}
+.display-block {
+    display: block;
+}
+.display-inline li {
+    display: inline-block;
+}
+
+
+//-----------------
+a,
+.transition-3s {
+    @include transitions(all 0.3s ease);//from mixin.scss
+}
+.transition-5s {
+    @include transitions(all 0.5s ease);//from mixin.scss
+}
+
+.modal input[type="button"],
+.modal input[type="submit"],
+.rex-sb-mainTab button[type="button"],
+.rex-sb-mainTab button[type="submit"],
+.rex-sb-mainTab input[type="button"],
+.rex-sb-mainTab input[type="submit"],
+.btn-default {
+    display: block;
+    border: none;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $primary-color;
+    cursor: pointer;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+//------------------------
+.visibility-hide {
+    opacity: 0;
+    visibility: hidden;
+}
+.visibility-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+//-----------------------
+.position-center-XY-axis {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transforms(translate(-50%, -50%));//from mixin.scss
+}
+.position-center-X-axis {
+    position: absolute;
+    left: 50%;
+    @include transforms(translateX(-50%));//from mixin.scss
+}
+.position-center-Y-axis {
+    position: absolute;
+    top: 50%;
+    @include transforms(translateY(-50%));//from mixin.scss
+}
+
+
+//---------------flex utility------------
+.align-center-center {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.align-col-left-center {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.align-col-left-bottom {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.align-col-right-center {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.align-col-right-bottom {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.align-col-center-bottom {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.align-row-left-top {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.align-row-left-center {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+.align-row-right-center {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+.align-row-center-center {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+.align-row-spacebetween {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}

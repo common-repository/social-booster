@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/bootstrap-vue/src/index.scss';
+
+//---------templete color css-----------
+@import 'helpers/colors';
+
+//---------templete reset css-----------
+@import 'base/reset';
+
+//---------templete typography css-----------
+@import 'base/typography';
+
+//---------templete mixins-----------
+@import 'helpers/mixin';
+
+//---------templete helper classes-----------
+@import 'helpers/helper-classes';
+
+//---------templete style css-----------
+@import 'layout/page';
+
+//---------dashboard component style css-----------
+@import 'components/dashboard/dashboard';
+
+//---------sharePost component style css-----------
+@import 'components/global/sharePost';
+
+//---------networks component style css-----------
+@import 'components/networks/networks';
+
+//---------facebookAuth component style css-----------
+@import 'components/networks/facebookAuth';
+
+//---------search filter component style css-----------
+@import 'components/global/searchFilter';
+
+//---------facebook share component style css-----------
+@import 'components/global/socialMediaShare';
+
+//---------post schedule component style css-----------
+@import 'components/global/postSchedule';
+
+//---------switcher component style css-----------
+@import 'components/global/switcher';
+
+//---------recent post component style css-----------
+@import 'components/global/recentPosts';
+
+//---------pageLoader component style css-----------
+@import 'components/global/pageLoader';
+
+//---------post sharing component style css-----------
+@import 'components/postSharing';
+
+//---------setup guide component style css-----------
+@import 'components/setupGuide';
+
+//---------setup guide component style css-----------
+@import 'components/settings/settings';
+
+
+
+.b-toaster.b-toaster-top-right {
+  top: 50px !important;
+}
+
+.card {
+  max-width: inherit;
+}
+
+#wpbody-content > .notice,
+#wpbody-content > div.error,
+#wpbody-content > div.updated {
+    margin: 5px 15px 22px 0;
+}

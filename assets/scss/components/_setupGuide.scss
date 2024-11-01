@@ -1,0 +1,114 @@
+.sb-setup-guide{
+    .header{
+        @extend %tab-content-header;//---this is from postSharing.scss----
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 14px 14px 30px;
+        h4{
+            img{
+                width: 19px;
+                position: relative;
+                top: -2px;
+            }
+        }
+        a.btn-default {
+            color: #fff;
+            height: 40px;
+            line-height: 41px;
+            padding: 0 20px;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+    }
+    
+    .guide-body{
+        @extend %sb-recent-posts-tab; //--this is from dashboard.scss--
+        margin-top: 30px;
+        margin-bottom: 0;
+        
+        .card{
+            padding: 0;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+        .card-header { 
+            margin-bottom: 20px;
+            
+            .nav-item {
+                .nav-link{
+                    box-shadow: 0 1px 1px 0 rgba(111,115,124,0.15);
+                    border: none;
+                    position: relative;
+                    
+                    @media #{$device_992_1199} {
+                        margin-bottom: 12px;
+                    }
+                    
+                    &:before{
+                      content: "";
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-top: 8px solid #2a74fb;
+                        bottom: -8px;
+                        left: 50%;
+                        @include transforms(translateX(-50%));
+                        @extend .transition-3s;
+                        @extend .visibility-hide;
+                        
+                        @media #{$device_992_1199} {
+                            display: none;
+                        }
+                    }
+                    &.active{
+                        box-shadow: none;
+                        
+                        &:before{
+                            @extend .visibility-show;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .single-tab{
+            background: #fff;
+            padding: 30px!important;
+            border-radius: 4px;
+        }
+        
+        .guide-wrapper{
+            padding-left: 18px;
+            
+            ol{
+                li{
+                    border-bottom: 1px solid #f4f5f6; 
+                    padding: 20px 0;
+                    
+                    &:first-child{
+                        padding-top: 0;
+                    }
+                    
+                    a{
+                        font-weight: 500;
+                        color: $primary-color;
+                        
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .copy-text {
+                cursor: copy;
+                color: #2A74FB;
+            }
+        }
+    }
+}

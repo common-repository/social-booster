@@ -1,0 +1,353 @@
+.sb-social-media-share{
+    .header{
+        .personal-share {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .label{
+                text-transform: capitalize;
+                font-weight: 700;
+            }
+            .icon{
+                width: 40px;
+                height: 40px;
+                color: #3b5998;
+                display: inline-block;
+                text-align: center;
+                margin-left: 10px;
+                line-height: 40px;
+                border-radius: 100%;
+                background: #f1f1f1;
+                cursor: pointer;
+                @extend .transition-3s;
+
+                &:hover{
+                    background: #3b5998;
+                    color: #fff;
+                }
+            }
+        }
+
+        ul{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 24px;
+
+            li{
+                padding: 0 10px;
+                margin: 0;
+            }
+            .icon{
+                padding-left: 0;
+                padding-right: 0;
+
+                span{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    font-size: 18px;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    background: #3b5998;
+                }
+            }
+            .name{
+                text-transform: uppercase;
+                font-size: 17px;
+                font-weight: 700;
+                color: #212327;
+            }
+            .type{
+                color: $secondary-color;
+                text-transform: capitalize;
+                border-left: 1px solid #e0e0e0;
+                line-height: 15px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .sb-form-wrapper{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+
+        .featured-img{
+            width: 320px;
+
+            input[type="file"]{
+                display: none;
+            }
+            label{
+                margin-bottom: 15px;
+                width: 100%;
+                height: 157px;
+                border: 1px dashed #cdcdcd;
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                overflow: hidden;
+
+                span.text{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $secondary-color;
+                    text-transform: uppercase;
+                }
+                span.icon{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 100%;
+                    background: #eafbf2;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 10px;
+                    color: $secondary-color;
+                }
+
+
+                &.img-uploaded {
+                    #feature-image{
+                        width: 100%;
+                    }
+                    span.text,
+                    span.icon {
+                        display: none;
+                    }
+                }
+            }
+            button{
+                display: inline-block;
+                height: 38px;
+                line-height: 40px;
+                font-size: 13px;
+                font-weight: 500;
+                padding: 0 20px;
+                font-family: $body-font;
+
+                &:focus{
+                    box-shadow: none;
+                    outline: none;
+                }
+
+                svg{
+                    margin-right: 5px;
+                }
+            }
+            .change-btn{
+                color: $primary-color;
+                background: rgba(42, 116, 251, 0.11);
+                margin-right: 5px;
+            }
+            .delete-btn{
+                color: #e94369;
+                background: rgba(233, 67, 105, 0.11);
+            }
+        }//---end featured img---
+
+        .input-text{
+            width: 100%;
+
+            .sb-from-group{
+                margin-bottom: 30px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+
+        }
+        .label{
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #212327;
+            margin-bottom: 6px;
+            display: inline-block;
+        }
+        .errMsg {
+            font-size: 13px;
+            display: inline-block;
+            margin-top: 5px;
+            color: #ff0d0d;
+        }
+
+    }
+    .description{
+        margin-top: 33px;
+
+        .mce-tinymce{
+            box-shadow: none;
+
+            .mce-top-part::before{
+                display: none;
+            }
+            .mce-toolbar-grp {
+                background: transparent;
+                padding: 2px 4px;
+                border: 1px dashed #cdcdcd;
+                border-radius: 3px;
+            }
+            .mce-statusbar {
+                border-top: none;
+                @include transforms(translate(-2px, -19px));
+                background: transparent;
+            }
+            .mce-edit-area {
+                border: 1px solid #eaebee !important;
+                border-top: none !important;
+                border-radius: 0 0 4px 4px;
+            }
+        }
+    }
+    .share-post{
+        margin-top: 17px;
+
+        input[readonly]{
+            background: #fff;
+        }
+        .rex-sb-tooltip {
+            right: 18px;
+            top: inherit;
+            width: 20px;
+            height: 20px;
+            bottom: 14px;
+
+            .tooltip-text {
+                min-width: 360px;
+            }
+            .tooltip-title{
+                i{
+                    font-size: 18px;
+                    position: absolute;
+                    left: 4px;
+                    color: #212327;
+                }
+                .fa-sort-down {
+                    margin-top: 1px;
+                }
+            }
+        }
+
+        .rex-sb-checkbox {
+            display: block;
+            margin-bottom: 0;
+
+            li{
+                margin-bottom: 12px;
+                margin-right: 0;
+
+                &:first-child{
+                    margin-bottom: 9px;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            label{
+                color: #fff;
+                font-weight: 400;
+                margin-bottom: 0;
+                line-height: 21px;
+                padding-left: 30px;
+                @extend .transition-3s;
+            }
+            input[type="radio"]+label span{
+                border-color: #fff;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 1px;
+                left: 0;
+            }
+            input[type="radio"]:checked+label span{
+                background: #fff;
+            }
+            input[type="radio"]+label span:before{
+                color: $primary-color;
+                font-size: 13px;
+                left: 4px;
+                top: -1px;
+            }
+            input[type="radio"]:checked+label{
+                color: #212327;
+            }
+        }
+    }
+
+    .spinner-border-sm {
+        margin-left: 3px;
+        position: relative;
+        top: -1px;
+    }
+
+    &.twitter{
+        .header{
+            ul{
+                .icon{
+                    span{
+                        background: #1da1f2;
+                    }
+                }
+            }
+        }
+    }
+    &.tumblr{
+        .header{
+            ul{
+                .icon{
+                    span{
+                        background: #34526f;
+                    }
+                }
+            }
+        }
+    }
+    &.linkedin{
+        .header{
+            ul{
+                .icon{
+                    span{
+                        background: #0077B5;
+                    }
+                }
+            }
+        }
+    }
+    &.reddit{
+        .header{
+            ul{
+                .icon{
+                    span{
+                        background: #ff4500;
+                    }
+                }
+            }
+        }
+    }
+    &.pinterest{
+        .header{
+            ul{
+                .icon{
+                    span{
+                        background: #E60023;
+                    }
+                }
+            }
+        }
+    }
+
+}

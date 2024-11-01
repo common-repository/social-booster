@@ -1,0 +1,70 @@
+{
+    "body": {
+        "data": {
+            "0": {
+                "id": "949133422105",
+                "name": "programming"
+            },
+            "1": {
+                "id": "898364082388",
+                "name": "airplanes"
+            },
+            "2": {
+                "id": "930106275255",
+                "name": "Funny pictures"
+            },
+            "3": {
+                "id": "896604368580",
+                "name": "game of thrones"
+            },
+            "4": {
+                "id": "907002707958",
+                "name": "illustrations"
+            },
+            "5": {
+                "id": "905860166503",
+                "name": "photography"
+            },
+            "6": {
+                "id": "896755026367",
+                "name": "Web design"
+            },
+            "7": {
+                "id": "920295496421",
+                "name": "Industrial design"
+            },
+            "8": {
+                "id": "902065567321",
+                "name": "design"
+            },
+            "9": {
+                "id": "918105274631",
+                "name": "architecture"
+            },
+            "10": {
+                "id": "899319027242",
+                "name": "suits"
+            }
+        },
+        "page": {
+            "cursor": null,
+            "next": null
+        }
+    },
+    "statusCode": 200,
+    "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Age": "0",
+        "Cache-Control": "private",
+        "Content-Type": "application\/json",
+        "Pinterest-Version": "4f9f34e",
+        "X-Content-Type-Options": "nosniff",
+        "X-Pinterest-RID": "704277507684",
+        "X-Ratelimit-Limit": "10",
+        "X-Ratelimit-Remaining": "0",
+        "Content-Length": "569",
+        "Date": "Sun, 22 Apr 2018 12:04:24 GMT",
+        "Connection": "keep-alive",
+        "Pinterest-Generated-By:": ""
+    }
+}

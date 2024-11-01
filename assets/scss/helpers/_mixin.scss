@@ -1,0 +1,35 @@
+
+//--------transition property-------
+@mixin transitions($property) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -ms-transition: $property;
+    -o-transition: $property;
+    transition: $property;
+}
+
+//--------transform property-------
+@mixin transforms($property_value) {
+    -webkit-transform: $property_value;
+    -moz-transform: $property_value;
+    -ms-transform: $property_value;
+    -o-transform: $property_value;
+    transform: $property_value;
+}
+
+//--------gradient background-------
+@mixin gradient ($gradient_color) {
+    background: -moz-linear-gradient( $gradient_color);
+    background: -webkit-linear-gradient( $gradient_color);
+    background: -ms-linear-gradient( $gradient_color);
+    background: -o-linear-gradient( $gradient_color);
+}
+
+
+
+
+
+
+
+
+

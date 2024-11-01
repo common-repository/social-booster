@@ -1,0 +1,174 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Social Booster\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 07:50+0000\n"
+"PO-Revision-Date: 2020-02-03 09:29+0000\n"
+"Last-Translator: devadmin <farshid@coderex.co>\n"
+"Language-Team: Spanish (Spain)\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+#: admin/views/modules/networks/template.php:22
+#: admin/views/modules/networks/template.php:116
+msgid "Add new profile:"
+msgstr "Añadir nuevo perfil:"
+
+#: admin/views/modules/schedule-post/template.php:45
+msgid "Add Schedule"
+msgstr "Agregar horario"
+
+#: admin/views/modules/switcher/template.php:4
+msgid "Apply settings to all network"
+msgstr "Aplicar configuraciones a toda la red"
+
+#: admin/views/modules/networks/template.php:125
+msgid "Back to profile"
+msgstr "Volver al perfil"
+
+#: admin/views/modules/networks/template.php:53
+#: admin/views/modules/networks/template.php:147
+msgid "Connected network"
+msgstr "Red conectada"
+
+#: admin/views/modules/setup-guide/template.php:8
+msgid "Documentation"
+msgstr "Documentación"
+
+#: admin/views/modules/post-schedule/template.php:12
+msgid "Duration"
+msgstr "Duración"
+
+#: admin/views/modules/settings/template.php:12
+msgid "Enable/Disable :"
+msgstr "Habilitar deshabilitar :"
+
+#: admin/APIs/class-rex-sb-rest-api-native.php:295
+#: admin/APIs/class-rex-sb-rest-api-native.php:383
+msgid "Error"
+msgstr "Error"
+
+#: admin/views/modules/dashboard/template.php:56
+msgid ""
+"Feel free to reach out to us with any queries and get prompt response from "
+"our reliable support team."
+msgstr ""
+"No dude en comunicarse con nosotros para cualquier consulta y obtener una "
+"pronta respuesta de nuestro confiable equipo de soporte."
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://rextheme.com/social-booster/"
+msgstr "https://rextheme.com/social-booster/"
+
+#: admin/views/modules/share-post/template.php:27
+msgid "Network inactive"
+msgstr "Red inactiva"
+
+#: admin/views/modules/post-sharing/template.php:37
+msgid "Next"
+msgstr "Próximo"
+
+#: admin/views/modules/share-post/template.php:34
+msgid "No Network Connected"
+msgstr "No hay red conectada"
+
+#: admin/views/modules/networks/template.php:91
+#: admin/views/modules/networks/template.php:185
+msgid "No Network Connected."
+msgstr "No hay red conectada."
+
+#: admin/views/modules/dashboard/template.php:48
+msgid "please rate us"
+msgstr "por favor califícanos"
+
+#: admin/views/modules/post-sharing/template.php:7
+msgid "Post & Sharing"
+msgstr "Publicar y compartir"
+
+#: admin/views/modules/dashboard/template.php:57
+msgid "Post a ticket"
+msgstr "Publica un boleto"
+
+#. Description of the plugin
+msgid ""
+"Post automatically from WordPress blog to any social media. It is easy and "
+"simple to use."
+msgstr ""
+"Publique automáticamente desde el blog de WordPress en cualquier red social. "
+"Es fácil y simple de usar."
+
+#: admin/views/modules/recent-posts/template.php:25
+msgid "Post on social media"
+msgstr "Publicar en las redes sociales"
+
+#: admin/views/modules/post-sharing/template.php:36
+msgid "Previous"
+msgstr "Anterior"
+
+#: admin/views/modules/post-schedule/template.php:7
+msgid "Reposter"
+msgstr "Reposter"
+
+#: admin/views/modules/dashboard/template.php:37
+msgid "Review"
+msgstr "revisión"
+
+#. Author of the plugin
+msgid "RexTheme"
+msgstr "RexTheme"
+
+#: admin/views/modules/pinterest-auth/template.php:50
+#: admin/views/modules/settings/template.php:26
+#: admin/views/modules/settings/template.php:66
+#: admin/views/modules/twitter-auth/template.php:36
+msgid "Save"
+msgstr "Salvar"
+
+#: admin/views/modules/post-schedule/template.php:33
+msgid "Save & Continue"
+msgstr "Guardar Continuar"
+
+#: admin/views/modules/post-schedule/template.php:3
+msgid "Schedule reposter"
+msgstr "Programar reposter"
+
+#: admin/views/modules/share-post/template.php:6
+msgid "Select a profile"
+msgstr "Selecciona un perfil"
+
+#: admin/views/modules/setup-guide/template.php:7
+msgid "Setup guide"
+msgstr "Guia de preparacion"
+
+#: admin/views/modules/facebook-share/template.php:76
+#: admin/views/modules/pinterest-share/template.php:64
+#: admin/views/modules/twitter-share/template.php:64
+msgid "Share now!"
+msgstr "¡Comparte ahora!"
+
+#: admin/views/modules/tumblr-share/template.php:64
+msgid "share now!"
+msgstr "¡Comparte ahora!"
+
+#: admin/views/modules/facebook-share/template.php:8
+msgid "Share on Facebook profile"
+msgstr "Compartir en el perfil de Facebook"
+
+#. Name of the plugin
+#: admin/class-rx-sb-admin.php:337 admin/views/modules/dashboard/template.php:8
+msgid "Social Booster"
+msgstr "Social Booster"
+
+#: admin/views/modules/dashboard/template.php:54
+msgid "Support"
+msgstr "Apoyo"
+
+#: admin/views/modules/edit-schedule/template.php:34
+msgid "Update Schedule"
+msgstr "Calendario de actualización"

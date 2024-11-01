@@ -1,0 +1,96 @@
+.sb-search-filter-content{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    
+    input,
+    select{
+        height: 50px;
+        padding: 11px 27px 10px 15px;
+        margin-left: 15px;
+        border-color: #edecec;
+        font-family: $body-font;
+        font-size: 14px;
+        width: 18%;
+        
+        @media #{$device_1600_1699} {
+            width: 17%;
+        }
+        @media #{$device_1400_1599} {
+            width: 15.2%;
+        }
+        @media #{$device_1200_1399} {
+            width: 28%;
+            margin-bottom: 15px;
+            height: 44px;
+            padding: 8px 27px 8px 15px;
+        }
+        
+        &:focus{
+            outline: none;
+            box-shadow: none;
+            border-color: #edecec!important;
+        }
+    }
+    select{
+        color: #212327;
+        font-weight: 500;
+        appearance: none; 
+        -webkit-appearance: none; 
+        -moz-appearance: none;
+        
+        option { 
+            font-size: 15px;
+            color: #212327;
+            padding: 10px 4px; 
+            appearance: none; 
+            -webkit-appearance: none; 
+            -moz-appearance: none;
+        }
+        &.post-type{
+            @media #{$device_1200_1399} {
+                margin-left: 0;
+            }
+        }
+    }
+    input{
+        margin-left: 0;
+        padding-right: 15px;
+        
+        @media #{$device_1600_1699} {
+            max-width: 210px;
+            width: 100%;
+        }
+        @media #{$device_1200_1399} {
+            max-width: 291px;
+        }
+        @media #{$device_992_1199} {
+            max-width: 199px;
+        }
+        
+        &:focus{
+            background: #fff;
+        }
+    }
+    button[type="submit"]{
+        height: 50px;
+        width: 60px;
+        padding: 0 20px;
+        font-size: 16px;
+        margin-left: 15px;
+        line-height: 53px;
+        
+        @media #{$device_1200_1399} {
+            margin-bottom: 15px;
+            height: 43px;
+            line-height: 46px;
+        }
+        
+        &:focus{
+            outline: none;
+            box-shadow: none;
+            border-color: #edecec;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "name": "hansott/pinterest-php",
+    "description": "PHP client for the official Pinterest API",
+    "keywords": [
+        "pinterest",
+        "oauth",
+        "api",
+        "repin"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hans Ott",
+            "email": "hans@iott.consulting"
+        },
+        {
+            "name": "Toon Daelman",
+            "email": "spinnewebber_toon@hotmail.com",
+            "homepage": "http://turanct.wordpress.com"
+        }
+    ],
+    "require": {
+        "kriswallsmith/buzz": "v0.15",
+        "netresearch/jsonmapper": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.8.12",
+        "vlucas/phpdotenv": "dev-master",
+        "symfony/yaml": "2.7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pinterest\\": "src/Pinterest/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pinterest\\Tests\\": "tests/Pinterest/"
+        }
+    }
+}

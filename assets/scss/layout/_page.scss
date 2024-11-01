@@ -1,0 +1,188 @@
+%disabled-tab{
+    color: #dadada;
+    pointer-events: inherit;
+    position: relative;
+    
+    .coming-tooltip{
+        position: absolute;
+        top: -23px;
+        right: 50%;
+        line-height: normal;
+        background: #01d664;
+        color: #fff;
+        font-weight: 400;
+        font-size: 11px;
+        text-transform: capitalize;
+        letter-spacing: .5px;
+        padding: 5px 10px;
+        border-radius: 3px;
+        white-space: pre;
+        @include transforms(translateX(50%));
+        @extend .transition-3s;
+        @extend .visibility-hide;
+        
+        &:after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid #01d664;
+            left: 50%;
+            margin-left: -3px;
+            bottom: -4px;
+        }
+    } 
+    
+    &:hover .coming-tooltip{
+        top: -30px;
+        @extend .visibility-show;
+    }
+}
+
+
+.rex-sb-mainTab{
+    padding-right: 30px;
+    background: #f3f4f8;
+    
+    & > .card{
+        padding: 0;
+        margin-top: 0;
+        max-width: 100%;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        
+        & > .tabs{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+            
+            & > .card-header{
+                padding: 0;
+                border: none;
+                min-width: 200px;
+                background: $tab-bg;
+                border-radius: 0;
+                align-self: stretch;
+                
+                ul{
+                    display: block;
+                    margin: 0;
+                    
+                    .nav-item:first-child {
+                        .disabled {
+                            padding: 24px;
+                            text-align: center;
+                            
+                            &:before {
+                                display: none;
+                            }
+                            
+                            .card-img{
+                                position: relative;
+                                margin-top: 0;
+                                left: inherit;
+                                top: inherit;
+                                @include transforms(translateY(0));
+                            }
+                        }
+                    }
+                    
+                    li{
+                        margin: 0;
+                        
+                        a{
+                            border: none;
+                            border-radius: 0;
+                            font-size: 16px;
+                            line-height: 24px;
+                            font-weight: 500;
+                            text-transform: capitalize;
+                            color: #9198C1;
+                            display: block;
+                            padding: 26px 20px 26px 51px;
+                            position: relative;
+                            
+                            &:before{
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                height: 100%;
+                                width: 3px;
+                                background: transparent;
+                            }
+                            
+                            @media #{$device_992_1199} {
+                                padding: 20px 20px 20px 51px;
+                            }
+                            
+                            .card-img{
+                                position: absolute;
+                                width: 22px;
+                                border-radius: 0;
+                                top: 50%;
+                                left: 20px;
+                                margin-top: -2px;
+                                @include transforms(translateY(-50%));
+                            }
+                            .hover-icon{
+                                @extend .visibility-hide;
+                            }
+                            
+                            &.active{
+                                color: $primary-color;
+                                background: rgba(42, 116, 251, 0.08);
+                                box-shadow: 0 2px 1px 0 rgba(0,0,0,0.12);
+                                
+                                &:before{
+                                    background: $primary-color;
+                                }
+                                
+                                .hover-icon{
+                                    @extend .visibility-show;
+                                }
+                                .default-icon{
+                                    @extend .visibility-hide;
+                                }
+                            }
+                            
+                            &.disabled{
+                                @extend %disabled-tab;
+                                color: #9198c1;
+                                
+                                .coming-tooltip{
+                                    top: 0!important;
+                                    margin-right: 20px;
+                                }
+                                &:hover .coming-tooltip{
+                                    top: -5px!important;
+                                }
+                            }
+                            
+                        }
+                        
+                        &:first-child{
+                            background: #010c50;
+                            
+                            .card-img{
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            & > .tab-content{
+                width: calc(100% - 200px);
+                
+                .card-body{
+                    padding: 0 0 30px 0;
+                }
+            }
+        }
+    }
+}
